@@ -1,0 +1,117 @@
+#country-container{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+#container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: white;
+    padding: 20px;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+#container h1{
+    font-size: 40px;
+    font-weight: bold;
+    letter-spacing: 1px;
+}
+
+#search {
+    width: 300px;
+}
+
+input {
+    border-radius: 10px;
+    padding: 10px;
+    border: 1px solid #ccc;
+    background-color: white;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.loading {
+    font-size: 20px;
+    text-align: center;
+    margin: 20px;
+    color: black;
+}
+
+.country-card{
+    position: relative;
+    background-color: #fff;
+    max-width: 355px;
+    border-radius: 25px;
+    margin: 30px;
+    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
+    /*overflow: hidden;*/
+    padding: 20px 30px 30px 30px;
+}
+
+.country-card::before{
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgb(249, 125, 187); 
+    clip-path: circle(400px at 80% -20%);
+    z-index: 0;
+    border-radius:25px;
+}
+
+.country-card .country-flag img {
+    height: 200px;
+    width: 300px;
+    border-radius: 13px;
+}
+
+.country-card img {
+    position: relative;
+    z-index: 1;
+}
+
+.country-card .country-details p{
+    position: relative;
+    z-index: 1;
+}
+
+#country-name{
+    font-size: 25px;
+    font-weight: bold;
+}
+
+.button{
+    position: relative;
+    height: 50px;
+    width: 100%;
+    border-radius: 25px;
+    margin-top: 30px;
+    overflow: hidden;
+}
+
+.button .button-layer{
+    position: absolute;
+    height: 100%;
+    width: 300%;
+    left: -100%;
+    background-image: linear-gradient(135deg, #fd71b7, #f9d2d8, #fd71b7, #f9d2d8);
+    transition: all 0.4s ease;
+}
+
+.button:hover .button-layer{
+    left: 0;
+}
+
+.button{
+    display: flex;
+    justify-content: center;
+    align-self: center;
+    text-decoration: none;
+    font-size: 18px;
+    font-weight: 600;
+    letter-spacing: 1px;
+    color: #fff;
+}
